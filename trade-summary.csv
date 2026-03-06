@@ -1,0 +1,27 @@
+Field,Value
+Trade ID,IRS-2026-000184
+Trade Date,2026-03-06
+Effective Date,2026-03-10
+Maturity Date,2031-03-10
+Counterparty,Example Pension Fund Ltd
+Booking Entity,Example Bank N.A.
+Product,Interest Rate Swap (Fixed vs Floating)
+Direction,Bank Pays Fixed / Receives Floating
+Notional,25000000
+Currency,USD
+Fixed Rate,0.04125
+Fixed Leg Day Count,30/360
+Fixed Payment Frequency,Semi-Annual
+Float Index,SOFR (Compounded)
+Float Spread,0.00035
+Float Day Count,ACT/360
+Float Reset Frequency,Quarterly
+Clearing,Cleared (Example CCP)
+Portfolio / Book,Rates_USD_Swaps
+Trader,J. Doe
+Sales,A. Smith
+Status,Confirmed
+Discounting Curve,USD OIS (SOFR)
+Projected Floating Curve,USD SOFR Term Structure
+PV (USD),-312500
+DV01 (USD),-11850
