@@ -8,89 +8,382 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
     />
-    <title>Vercel HTML Starter</title>
+    <title>Cosine — Overview</title>
     <meta
       name="description"
-      content="High-performance HTML based website template."
+      content="An overview of Cosine: a terminal-first AI colleague for end-to-end software engineering."
     />
+    <style>
+      :root {
+        --cosine-accent: #4f46e5;
+
+        /* new.css theme overrides */
+        --nc-bg-1: #0b3d1f;
+        --nc-bg-2: #0f4a26;
+        --nc-bg-3: #166235;
+      }
+
+      .tagline {
+        font-size: 1.05rem;
+        max-width: 70ch;
+      }
+
+      nav.toc {
+        border: 1px solid var(--nc-bg-3);
+        padding: 1rem;
+        border-radius: 0.75rem;
+      }
+
+      nav.toc a {
+        text-decoration: none;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: 1px solid var(--nc-bg-3);
+        border-radius: 999px;
+        padding: 0.25rem 0.65rem;
+        font-size: 0.9rem;
+        margin: 0.25rem 0.25rem 0 0;
+      }
+
+      .pill strong {
+        color: var(--cosine-accent);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 0.85rem;
+      }
+
+      .card {
+        border: 1px solid var(--nc-bg-3);
+        border-radius: 0.75rem;
+        padding: 0.9rem;
+        background: var(--nc-bg-2);
+      }
+
+      details {
+        border: 1px solid var(--nc-bg-3);
+        border-radius: 0.75rem;
+        padding: 0.7rem 0.85rem;
+        background: var(--nc-bg-2);
+      }
+
+      details + details {
+        margin-top: 0.65rem;
+      }
+
+      summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      kbd {
+        border: 1px solid var(--nc-bg-3);
+        border-bottom-width: 2px;
+        border-radius: 0.35rem;
+        padding: 0.05rem 0.35rem;
+        background: var(--nc-bg-2);
+      }
+
+      .copy-row {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+
+      .copy-row button {
+        margin: 0;
+      }
+
+      footer {
+        margin-top: 2rem;
+        font-size: 0.95rem;
+        opacity: 0.9;
+      }
+    </style>
   </head>
   <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
+    <header class="hero">
+      <h1>Cosine</h1>
+      <p class="tagline">
+        Cosine is a terminal-first AI colleague designed to complete software
+        engineering tasks end-to-end: understanding a repository, editing files
+        safely, running tests, and iterating until the outcome is verified.
+      </p>
+      <p>
+        <span class="pill"><strong>Focus</strong> end-to-end delivery</span>
+        <span class="pill"><strong>Style</strong> professional + direct</span>
+        <span class="pill"><strong>Workflow</strong> test what changes</span>
+        <span class="pill"><strong>Principle</strong> minimal retrieval</span>
+      </p>
+    </header>
+
+    <nav class="toc" aria-label="Table of contents">
+      <strong>On this page</strong>
+      <ul>
+        <li><a href="#what">What Cosine is</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#capabilities">Core capabilities</a></li>
+        <li><a href="#workflow">Typical workflow</a></li>
+        <li><a href="#examples">Example requests</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="what">
+        <h2>What Cosine is</h2>
+        <p>
+          Cosine is an AI assistant optimized for practical engineering work.
+          Instead of stopping at advice, it can directly modify your codebase,
+          run commands, and validate results.
+        </p>
+        <div class="grid" role="list">
+          <div class="card" role="listitem">
+            <h3>Terminal-based</h3>
+            <p>
+              Operates like a colleague in a terminal session: reads files,
+              edits code, runs builds/tests, and reports what was verified.
+            </p>
+          </div>
+          <div class="card" role="listitem">
+            <h3>Repo-aware</h3>
+            <p>
+              Follows existing conventions (naming, formatting, patterns) and
+              avoids unnecessary churn.
+            </p>
+          </div>
+          <div class="card" role="listitem">
+            <h3>Change + verify</h3>
+            <p>
+              Doesn’t claim success without checking. When it changes code, it
+              should run relevant tests or demos.
+            </p>
+          </div>
+          <div class="card" role="listitem">
+            <h3>Minimal retrieval</h3>
+            <p>
+              Reads the minimum set of files needed to complete the task, using
+              targeted searches when location is unclear.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how">
+        <h2>How it works (high level)</h2>
+        <ol>
+          <li>
+            <strong>Locate</strong> the relevant code using file search and
+            targeted reads.
+          </li>
+          <li>
+            <strong>Change</strong> code with small, consistent edits that match
+            your style.
+          </li>
+          <li>
+            <strong>Verify</strong> via tests/builds, or a focused repro script.
+          </li>
+          <li>
+            <strong>Explain</strong> the commands it ran and the reasoning for
+            non-trivial decisions.
+          </li>
+        </ol>
+        <p>
+          Cosine is happiest when you give it a clear outcome (bug report,
+          feature request, or acceptance criteria).
+        </p>
+      </section>
+
+      <section id="capabilities">
+        <h2>Core capabilities</h2>
+        <details open>
+          <summary>Codebase navigation</summary>
+          <ul>
+            <li>Find files by name patterns and search within file contents</li>
+            <li>Read only what’s needed to complete the current step</li>
+            <li>Infer conventions from nearby code (imports, formatting, APIs)</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Safe, incremental edits</summary>
+          <ul>
+            <li>Prefer small diffs and clear intent</li>
+            <li>Avoid replacing large blocks with TODOs</li>
+            <li>Respect existing comments, quotes, whitespace, and structure</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Verification</summary>
+          <ul>
+            <li>Run appropriate tests and builds</li>
+            <li>When tests don’t exist, create a minimal repro/validation</li>
+            <li>Report what was actually run and observed</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Web + docs research (when needed)</summary>
+          <ul>
+            <li>Look up latest versions and API docs before adding dependencies</li>
+            <li>Prefer official docs; cite sources when summarizing</li>
+          </ul>
+        </details>
+      </section>
+
+      <section id="workflow">
+        <h2>Typical workflow</h2>
+        <p>
+          A good request includes: <em>what you want</em>, <em>where it lives</em>
+          (if you know), and <em>how to verify</em>.
+        </p>
+        <div class="card">
+          <h3>Example: bug fix</h3>
+          <ul>
+            <li>You: “Login fails with 500 when email has a plus sign.”</li>
+            <li>Cosine: reproduces, finds the handler, patches parsing</li>
+            <li>Cosine: runs unit/integration tests or adds a targeted test</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Example: feature</h3>
+          <ul>
+            <li>You: “Add CSV export to the users table.”</li>
+            <li>Cosine: finds table component + API route, adds export</li>
+            <li>Cosine: adds/updates tests and verifies locally</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="examples">
+        <h2>Example requests you can copy</h2>
+        <p>
+          Tip: include acceptance criteria and how to verify.
+        </p>
+
+        <div class="card">
+          <div class="copy-row">
+            <button data-copy="ex1" type="button">Copy</button>
+            <strong>Fix a failing test</strong>
+          </div>
+          <pre><code id="ex1">Tests are failing on CI: "should paginate results".
+
+Please find the regression, fix it, and run the smallest relevant test suite locally.</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="copy-row">
+            <button data-copy="ex2" type="button">Copy</button>
+            <strong>Add a small feature</strong>
+          </div>
+          <pre><code id="ex2">Add a "Copy link" button to the article page.
+
+Requirements:
+- Uses the existing button component.
+- Shows a non-blocking toast on success.
+- Covered by a unit test.
+
+Please implement and run tests.</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="copy-row">
+            <button data-copy="ex3" type="button">Copy</button>
+            <strong>Refactor safely</strong>
+          </div>
+          <pre><code id="ex3">Refactor the payment calculation to remove duplication.
+
+Constraints:
+- No behavior change.
+- Keep existing public API.
+- Add a small regression test if coverage is missing.</code></pre>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2>FAQ</h2>
+        <details>
+          <summary>What makes Cosine different from a chat-only assistant?</summary>
+          <p>
+            It’s built around an engineering loop: modify the repository,
+            validate with real commands, and communicate what was verified.
+          </p>
+        </details>
+        <details>
+          <summary>Will Cosine add lots of new files or dependencies?</summary>
+          <p>
+            It prefers minimal changes. New dependencies should be justified,
+            aligned with project conventions, and verified.
+          </p>
+        </details>
+        <details>
+          <summary>How do I get the best results?</summary>
+          <p>
+            Provide a clear outcome, constraints, and a way to verify (tests,
+            steps, expected output). If you know the file or folder, mention it.
+          </p>
+        </details>
+        <details>
+          <summary>What does “minimal retrieval” mean in practice?</summary>
+          <p>
+            Read the smallest set of files necessary to finish the current step,
+            rather than scanning the whole repository “for context”.
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        This site is a single <code>index.html</code> page designed to deploy as
+        static content (for example on Vercel). It includes Vercel Analytics via
+        <code>/_vercel/insights/script.js</code> and uses Edge Middleware headers
+        from <code>middleware.js</code>.
+      </p>
+      <p>
+        Keyboard tip: use <kbd>Ctrl</kbd> + <kbd>F</kbd> / <kbd>⌘</kbd> +
+        <kbd>F</kbd> to search this page.
+      </p>
+    </footer>
+
+    <script>
+      async function copyFromCodeBlock(id) {
+        const el = document.getElementById(id);
+        const text = el ? el.textContent : '';
+        if (!text) return;
+
+        await navigator.clipboard.writeText(text);
+      }
+
+      function wireCopyButtons() {
+        const buttons = document.querySelectorAll('button[data-copy]');
+        for (const btn of buttons) {
+          btn.addEventListener('click', async () => {
+            const target = btn.getAttribute('data-copy');
+            const original = btn.textContent;
+            btn.disabled = true;
+
+            try {
+              await copyFromCodeBlock(target);
+              btn.textContent = 'Copied';
+            } catch {
+              btn.textContent = 'Copy failed';
+            }
+
+            window.setTimeout(() => {
+              btn.textContent = original;
+              btn.disabled = false;
+            }, 1000);
+          });
+        }
+      }
+
+      wireCopyButtons();
+    </script>
   </body>
 </html>

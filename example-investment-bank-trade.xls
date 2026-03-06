@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+    <Title>Example Investment Bank Trade</Title>
+    <Author>Cosine</Author>
+    <Created>2026-03-06T00:00:00Z</Created>
+    <Company>Example Investment Bank</Company>
+    <Version>16.00</Version>
+  </DocumentProperties>
+
+  <Styles>
+    <Style ss:ID="Default" ss:Name="Normal">
+      <Alignment ss:Vertical="Bottom" />
+      <Borders />
+      <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000" />
+      <Interior />
+      <NumberFormat />
+      <Protection />
+    </Style>
+
+    <Style ss:ID="sHeader">
+      <Font ss:Bold="1" />
+      <Interior ss:Color="#E5E7EB" ss:Pattern="Solid" />
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+      </Borders>
+    </Style>
+
+    <Style ss:ID="sTitle">
+      <Font ss:Bold="1" ss:Size="14" />
+    </Style>
+
+    <Style ss:ID="sMoney">
+      <NumberFormat ss:Format="#,##0.00" />
+    </Style>
+
+    <Style ss:ID="sDate">
+      <NumberFormat ss:Format="yyyy-mm-dd" />
+    </Style>
+
+    <Style ss:ID="sPct">
+      <NumberFormat ss:Format="0.000%" />
+    </Style>
+
+    <Style ss:ID="sTextMuted">
+      <Font ss:Color="#374151" />
+    </Style>
+  </Styles>
+
+  <Worksheet ss:Name="Trade Summary">
+    <Table ss:DefaultColumnWidth="140">
+      <Column ss:Width="220" />
+      <Column ss:Width="260" />
+
+      <Row>
+        <Cell ss:StyleID="sTitle"><Data ss:Type="String">Example Investment Bank Trade (Illustrative)</Data></Cell>
+      </Row>
+      <Row>
+        <Cell ss:StyleID="sTextMuted"><Data ss:Type="String">Note</Data></Cell>
+        <Cell ss:StyleID="sTextMuted"><Data ss:Type="String">Fictional data for demonstration only (not a recommendation or real market quote).</Data></Cell>
+      </Row>
+      <Row />
+
+      <Row>
+        <Cell ss:StyleID="sHeader"><Data ss:Type="String">Field</Data></Cell>
+        <Cell ss:StyleID="sHeader"><Data ss:Type="String">Value</Data></Cell>
+      </Row>
+
+      <Row><Cell><Data ss:Type="String">Trade ID</Data></Cell><Cell><Data ss:Type="String">IRS-2026-000184</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Trade Date</Data></Cell><Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2026-03-06T00:00:00.000</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Effective Date</Data></Cell><Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2026-03-10T00:00:00.000</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Maturity Date</Data></Cell><Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2031-03-10T00:00:00.000</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Counterparty</Data></Cell><Cell><Data ss:Type="String">Example Pension Fund Ltd</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Booking Entity</Data></Cell><Cell><Data ss:Type="String">Example Bank N.A.</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Product</Data></Cell><Cell><Data ss:Type="String">Interest Rate Swap (Fixed vs Floating)</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Direction</Data></Cell><Cell><Data ss:Type="String">Bank Pays Fixed / Receives Floating</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Notional</Data></Cell><Cell ss:StyleID="sMoney"><Data ss:Type="Number">25000000</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Currency</Data></Cell><Cell><Data ss:Type="String">USD</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Fixed Rate</Data></Cell><Cell ss:StyleID="sPct"><Data ss:Type="Number">0.04125</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Fixed Leg Day Count</Data></Cell><Cell><Data ss:Type="String">30/360</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Fixed Payment Frequency</Data></Cell><Cell><Data ss:Type="String">Semi-Annual</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Float Index</Data></Cell><Cell><Data ss:Type="String">SOFR (Compounded)</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Float Spread</Data></Cell><Cell ss:StyleID="sPct"><Data ss:Type="Number">0.00035</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Float Day Count</Data></Cell><Cell><Data ss:Type="String">ACT/360</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Float Reset Frequency</Data></Cell><Cell><Data ss:Type="String">Quarterly</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Clearing</Data></Cell><Cell><Data ss:Type="String">Cleared (Example CCP)</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Portfolio / Book</Data></Cell><Cell><Data ss:Type="String">Rates_USD_Swaps</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Trader</Data></Cell><Cell><Data ss:Type="String">J. Doe</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Sales</Data></Cell><Cell><Data ss:Type="String">A. Smith</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Status</Data></Cell><Cell><Data ss:Type="String">Confirmed</Data></Cell></Row>
+
+      <Row />
+      <Row>
+        <Cell ss:StyleID="sTextMuted"><Data ss:Type="String">Pricing</Data></Cell>
+        <Cell ss:StyleID="sTextMuted"><Data ss:Type="String">Illustrative mark-to-market fields (placeholders)</Data></Cell>
+      </Row>
+      <Row><Cell><Data ss:Type="String">Discounting Curve</Data></Cell><Cell><Data ss:Type="String">USD OIS (SOFR)</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">Projected Floating Curve</Data></Cell><Cell><Data ss:Type="String">USD SOFR Term Structure</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">PV (USD)</Data></Cell><Cell ss:StyleID="sMoney"><Data ss:Type="Number">-312500</Data></Cell></Row>
+      <Row><Cell><Data ss:Type="String">DV01 (USD)</Data></Cell><Cell ss:StyleID="sMoney"><Data ss:Type="Number">-11850</Data></Cell></Row>
+    </Table>
+
+    <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+      <FreezePanes />
+      <FrozenNoSplit />
+      <SplitHorizontal>4</SplitHorizontal>
+      <TopRowBottomPane>4</TopRowBottomPane>
+      <ActivePane>2</ActivePane>
+      <Panes>
+        <Pane>
+          <Number>2</Number>
+        </Pane>
+      </Panes>
+      <ProtectObjects>False</ProtectObjects>
+      <ProtectScenarios>False</ProtectScenarios>
+    </WorksheetOptions>
+  </Worksheet>
+
+  <Worksheet ss:Name="Cashflows (Illustrative)">
+    <Table ss:DefaultColumnWidth="130">
+      <Column ss:Width="120" />
+      <Column ss:Width="120" />
+      <Column ss:Width="140" />
+      <Column ss:Width="140" />
+      <Column ss:Width="120" />
+      <Column ss:Width="120" />
+      <Column ss:Width="140" />
+
+      <Row>
+        <Cell ss:StyleID="sTitle"><Data ss:Type="String">Illustrative Cashflow Schedule (first 6 periods)</Data></Cell>
+      </Row>
+      <Row />
+
+      <Row>
+        <Cell ss:StyleID="sHeader"><Data ss:Type="String">Period Start</Data></Cell>
+        <Cell ss:StyleID="sHeader"><Data ss:Type="String">Period End</Data></Cell>
+        <Cell ss:StyleID="sHeader"><Data ss:Type="String">Pay Date</Data></Cell>
+        <Cell ss:StyleID="sHeader"><Data ss:Type="String">Fixed Amount (Bank pays)</Data></Cell>
+        <Cell ss:StyleID="sHeader"><Data ss:Type="String">Float Rate</Data></Cell>
+        <Cell ss:StyleID="sHeader"><Data ss:Type="String">Spread</Data></Cell>
+        <Cell ss:StyleID="sHeader"><Data ss:Type="String">Float Amount (Bank receives)</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2026-03-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2026-06-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2026-06-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sMoney"><Data ss:Type="Number">515625</Data></Cell>
+        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.03980</Data></Cell>
+        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.00035</Data></Cell>
+        <Cell ss:StyleID="sMoney"><Data ss:Type="Number">514200</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2026-06-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2026-09-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2026-09-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sMoney"><Data ss:Type="Number">515625</Data></Cell>
+        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.04010</Data></Cell>
+        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.00035</Data></Cell>
+        <Cell ss:StyleID="sMoney"><Data ss:Type="Number">519850</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2026-09-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2026-12-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2026-12-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sMoney"><Data ss:Type="Number">515625</Data></Cell>
+        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.04045</Data></Cell>
+        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.00035</Data></Cell>
+        <Cell ss:StyleID="sMoney"><Data ss:Type="Number">529200</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2026-12-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2027-03-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2027-03-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sMoney"><Data ss:Type="Number">515625</Data></Cell>
+        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.04070</Data></Cell>
+        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.00035</Data></Cell>
+        <Cell ss:StyleID="sMoney"><Data ss:Type="Number">535900</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2027-03-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2027-06-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2027-06-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sMoney"><Data ss:Type="Number">515625</Data></Cell>
+        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.04105</Data></Cell>
+        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.00035</Data></Cell>
+        <Cell ss:StyleID="sMoney"><Data ss:Type="Number">545350</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2027-06-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2027-09-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sDate"><Data ss:Type="DateTime">2027-09-10T00:00:00.000</Data></Cell>
+        <Cell ss:StyleID="sMoney"><Data ss:Type="Number">515625</Data></Cell>
+        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.04125</Data></Cell>
+        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.00035</Data></Cell>
+        <Cell ss:StyleID="sMoney"><Data ss:Type="Number">550750</Data></Cell>
+      </Row>
+    </Table>
+  </Worksheet>
+</Workbook>
