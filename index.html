@@ -15,13 +15,17 @@
         --page-text: #222222;
         --page-link: #0066cc;
         --page-border: rgba(0, 0, 0, 0.12);
+        --surface-bg: #f6f8fa;
+        --surface-text: #111827;
       }
 
       html[data-theme='dark'] {
         --page-bg: #0b0f14;
         --page-text: #e6edf3;
-        --page-link: #7cb8ff;
+        --page-link: #9ad0ff;
         --page-border: rgba(255, 255, 255, 0.16);
+        --surface-bg: #111827;
+        --surface-text: #e6edf3;
       }
 
       body {
@@ -33,11 +37,60 @@
         color: var(--page-link);
       }
 
+      p,
+      li,
+      dt,
+      dd,
+      blockquote,
+      label {
+        color: var(--page-text);
+      }
+
+      pre,
+      code,
+      kbd,
+      samp {
+        background: var(--surface-bg);
+        color: var(--surface-text);
+        border-color: var(--page-border);
+      }
+
+      hr {
+        border-color: var(--page-border);
+      }
+
+      table,
+      th,
+      td {
+        border-color: var(--page-border);
+      }
+
+      input,
+      textarea,
+      select {
+        background: var(--surface-bg);
+        color: var(--surface-text);
+        border-color: var(--page-border);
+      }
+
+      ::placeholder {
+        color: color-mix(in srgb, var(--surface-text) 55%, transparent);
+      }
+
       header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: var(--page-text);
       }
 
       #theme-toggle {
