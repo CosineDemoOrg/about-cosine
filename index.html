@@ -3,11 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
     <script defer src="/_vercel/insights/script.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
     />
+    <style>
+      :root {
+        --page-bg: #ffffff;
+        --page-text: #222222;
+        --page-link: #0066cc;
+        --page-border: rgba(0, 0, 0, 0.12);
+      }
+
+      html[data-theme='dark'] {
+        --page-bg: #0b0f14;
+        --page-text: #e6edf3;
+        --page-link: #7cb8ff;
+        --page-border: rgba(255, 255, 255, 0.16);
+      }
+
+      body {
+        background: var(--page-bg);
+        color: var(--page-text);
+      }
+
+      a {
+        color: var(--page-link);
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      #theme-toggle {
+        border: 1px solid var(--page-border);
+        background: transparent;
+        color: inherit;
+        padding: 0.35rem 0.6rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+
+      #theme-toggle:focus-visible {
+        outline: 2px solid var(--page-link);
+        outline-offset: 2px;
+      }
+    </style>
+    <script>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        var prefersDark =
+          window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
     <title>Vercel HTML Starter</title>
     <meta
       name="description"
@@ -15,7 +71,32 @@
     />
   </head>
   <body>
-    <h1>Vercel HTML Starter</h1>
+    <header>
+      <h1>Vercel HTML Starter</h1>
+      <button id="theme-toggle" type="button">Toggle theme</button>
+    </header>
+    <script>
+      (function () {
+        var button = document.getElementById('theme-toggle');
+
+        function setTheme(theme) {
+          document.documentElement.dataset.theme = theme;
+          localStorage.setItem('theme', theme);
+          button.setAttribute('aria-label',
+            theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+          );
+          button.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+        }
+
+        var initial = document.documentElement.dataset.theme || 'light';
+        setTheme(initial);
+
+        button.addEventListener('click', function () {
+          var current = document.documentElement.dataset.theme;
+          setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+      })();
+    </script>
     <p>
       This template is a simple, but powerful single
       <code>index.html</code> file deployed to
